@@ -38,6 +38,11 @@
                 "taskName": "deploy",
                 "suppressTaskName": true,
                 "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make flash && cd ../arc && make CROSS_COMPILE=/Volumes/CrossToolNG/arc-elf32/1.6.4+1.0/bin/arc-elf32- flash"]
+            },
+            {
+                "taskName": "openocd_server",
+                "suppressTaskName": true,
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make debug"]
             }
         ]
     }

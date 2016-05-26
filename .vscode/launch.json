@@ -4,9 +4,13 @@
         {
             "name": "Debug",
             "type": "gdb",
-            "request": "launch",
-            "target": "./bin/executable",
-            "cwd": "${workspaceRoot}"
+            "request": "attach",
+            //"preLaunchTask": "openocd_server",  Thing is, this process does not stop so if it is pre-launch, launch never happens 
+            "remote": true, 
+            "executable": "outdir/zephyr.elf",
+            "printCalls": true,
+            "cwd": "${workspaceRoot}/x86",
+            "target": "remote :3333"
         }
     ]
 }

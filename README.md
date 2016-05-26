@@ -11,6 +11,7 @@ You will find the following tasks available once you open the directory (hopeful
 - clean
 - build
 - deploy
+- openocd (this one starts the openocd debug server running that you can attach GDB to)
 
 The project is split into an `x86` and an `arc` area where you can put the code you want to run on each core.
 

@@ -30,3 +30,13 @@
 
 # Debug files
 *.dSYM/
+
+# Mac files
+.DS_Store
+
+x86/outdir
+arc/outdir
+
+.built-in.o.cmd
+.main.o.cmd
+.browse.VC.db*

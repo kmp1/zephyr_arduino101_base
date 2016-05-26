@@ -1,0 +1,44 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "osx" : {
+        "command": "bash",
+        "suppressTaskName": true,
+        "isShellCommand": true,
+        "showOutput": "always",
+        "args": [
+            "-c"
+        ],
+        "tasks": [
+            {
+                "taskName": "clean",
+                "suppressTaskName": true,
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make pristine && cd ../arc && make pristine && echo DONE"]
+            },
+            {
+                "taskName": "build",
+                "suppressTaskName": true,
+                "isBuildCommand": true,
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make && cd ../arc && make CROSS_COMPILE=/Volumes/CrossToolNG/arc-elf32/1.6.4+1.0/bin/arc-elf32- && echo DONE"],
+                "problemMatcher": {
+                    "owner": "cpp",
+                    "fileLocation": ["relative", "${workspaceRoot}"],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            },
+            {
+                "taskName": "deploy",
+                "suppressTaskName": true,
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make flash && cd ../arc && make CROSS_COMPILE=/Volumes/CrossToolNG/arc-elf32/1.6.4+1.0/bin/arc-elf32- flash"]
+            }
+        ]
+    }
+}

@@ -15,7 +15,7 @@ You will find the following tasks available once you open the directory containi
 
 The project is split into an `x86` and an `arc` area where you can put the code you want to run on each core.
 
-**NOTE** It assumes that you have a volume called `/Volumes/CrossToolNG` that contains `zephyr` and `arc-elf32` sub-directories containing the zephyr project kernel source and version **1.6.4+1.0** of the ARC tools.  It also presumes that [openocd](http://openocd.org/) is installed at `/usr/local/share/openocd`.  Take a look in `.vscode/tasks.json` and `.vscode/launch.json` if any of this is not true and tweak accordingly.
+**NOTE** It assumes that you have a volume called `/Volumes/CrossToolNG` that contains `zephyr` and `arc-elf32` sub-directories containing the zephyr project kernel source and version **1.6.4+1.0** of the ARC tools.  It also presumes that [openocd](http://openocd.org/) is installed at `/usr/local/share/openocd`.  Take a look in `.vscode/tasks.json`, `.vscode/launch.json` and `.vscode/c_cpp_properties.json` if any of this is not true and tweak accordingly.
 
 ##Further Information
 

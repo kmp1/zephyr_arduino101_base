@@ -1,29 +1,29 @@
 {
     "version": "0.2.0",
-    //"preLaunchTask": "openocd_server",  Thing is, this process does not stop so if it is pre-launch, launch never happens 
     "configurations": [
         {
             "name": "Debug x86",
             "type": "gdb",
             "request": "attach",
-            "remote": true, 
+            "remote": true,
             "executable": "outdir/zephyr.elf",
             "printCalls": true,
             "cwd": "${workspaceRoot}/x86",
-            "target": "remote :3333",
-            "gdbpath": "/Volumes/CrossToolNG/x-tools/i586-pc-elf/bin/i586-pc-elf-gdb",
-            "autorun": ["continue"]
+            "target": ":3333",
+            "gdbpath": "/Volumes/CrossToolNG/x-tools/i586-pc-elf/bin/i586-pc-elf-gdb"
+            //"preLaunchTask": "x86_debug_server" Thing is, this process does not stop so if it is pre-launch, launch never happens
         },
         {
-            "name": "Debug ARC",
+            "name": "Debug Arc",
             "type": "gdb",
             "request": "attach",
-            "remote": true, 
+            "remote": true,
             "executable": "outdir/zephyr.elf",
             "printCalls": true,
             "cwd": "${workspaceRoot}/arc",
-            "target": "remote :3334",
+            "target": ":3334",
             "gdbpath": "/Volumes/CrossToolNG/arc-elf32/1.6.4+1.0/bin/arc-elf32-gdb"
+            //"preLaunchTask": "arc_debug_server" Thing is, this process does not stop so if it is pre-launch, launch never happens
         }
     ]
 }

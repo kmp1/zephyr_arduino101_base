@@ -40,9 +40,14 @@
                 "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make flash && cd ../arc && make CROSS_COMPILE=/Volumes/CrossToolNG/arc-elf32/1.6.4+1.0/bin/arc-elf32- flash"]
             },
             {
-                "taskName": "openocd",
+                "taskName": "x86_debug_server",
                 "suppressTaskName": true,
-                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && cd x86 && make debug"]
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && openocd -s /usr/local/share/openocd/scripts -f ${ZEPHYR_BASE}/boards/arduino_101/support/openocd.cfg -c 'init' -c 'targets' -c 'reset halt'"]
+            },
+            {
+                "taskName": "arc_debug_server",
+                "suppressTaskName": true,
+                "args": ["source /Volumes/CrossToolNG/zephyr/zephyr-env.sh && openocd -s /usr/local/share/openocd/scripts -f ${ZEPHYR_BASE}/boards/arduino_101_sss/support/openocd.cfg -c 'init' -c 'targets' -c 'reset halt'"]
             }
         ]
     }

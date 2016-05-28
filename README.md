@@ -1,17 +1,21 @@
 #VSCode Arduino 101 Starter Project for Zephyr
 
-This is a skeleton project to use when writing applications for the Arduino 101 using the [Zephyr RTOS](https://www.zephyrproject.org).  It has settings for the VSCode project and was implemented on a mac.  It has support for debugging via the openocd/gdb route.  Check the tasks.json and launch.json files for more information.
+This is a skeleton project to use when writing applications for the Arduino 101 using the [Zephyr RTOS](https://www.zephyrproject.org).  It has settings inside the `.vscode` directory that allows Visual Studio Code to clean/build/debug the project.  It was implemented on a mac so only mac settings are included.  Linux should not be too different though.  Check the files inside `.vscode` for more information.
 
-It requires the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) for VS Code, zou can install it from the command palette in VSCode like so:
+It requires the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) for VS Code, you can install it from the command palette like so:
 
     ext install cpptools
 
-You will find the following tasks available once you open the directory containing the project (hopefully the names are self-explanatory):
+The following tasks are available once you open the directory containing the project (hopefully the names are self-explanatory):
 - clean
 - build
 - deploy
 - x86_debug_server (this one starts the openocd debug server for x86 that you can attach GDB to)
 - arc_debug_server (this one starts the openocd debug server for arc that you can attach GDB to)
+
+The following launch configurations are also available:
+- Debug x86 (for debugging the x86 core)
+- Debug Arc (for debugging the arc code)
 
 The project is split into an `x86` and an `arc` area where you can put the code you want to run on each core.
 

@@ -1,12 +1,12 @@
 #VSCode Arduino 101 Starter Project for Zephyr
 
-This is a skeleton project to use when writing applications for the Arduino 101 using the Zephyr RTOS.  It has settings for the VSCode project and was implemented on a mac.
+This is a skeleton project to use when writing applications for the Arduino 101 using the [Zephyr RTOS](https://www.zephyrproject.org).  It has settings for the VSCode project and was implemented on a mac.  It has support for debugging via the openocd/gdb route.  Check the tasks.json and launch.json files for more information.
 
-Firstly you will need to install the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) for VS Code:
+It requires the [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) for VS Code, zou can install it from the command palette in VSCode like so:
 
     ext install cpptools
 
-You will find the following tasks available once you open the directory (hopefully the names are self-explanatory):
+You will find the following tasks available once you open the directory containing the project (hopefully the names are self-explanatory):
 - clean
 - build
 - deploy
@@ -15,7 +15,7 @@ You will find the following tasks available once you open the directory (hopeful
 
 The project is split into an `x86` and an `arc` area where you can put the code you want to run on each core.
 
-**NOTE** It assumes that you have a volume called `/Volumes/CrossToolNG` that contains `zephyr` and `arc-elf32` sub-directories containing the zephyr project kernel source and version **1.6.4+1.0** of the ARC tools.  Take a look in `.vscode/tasks.json` if not.
+**NOTE** It assumes that you have a volume called `/Volumes/CrossToolNG` that contains `zephyr` and `arc-elf32` sub-directories containing the zephyr project kernel source and version **1.6.4+1.0** of the ARC tools.  It also presumes that [openocd](http://openocd.org/) is installed at `/usr/local/share/openocd`.  Take a look in `.vscode/tasks.json` and `.vscode/launch.json` if any of this is not true and tweak accordingly.
 
 ##Further Information
 

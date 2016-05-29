@@ -3,9 +3,9 @@
 #include <sys_clock.h>
 #include <zephyr.h>
 
-#define GPIO_OUT_PIN 	2
-#define GPIO_NAME 		"GPIO_SS_"
-#define GPIO_DRV_NAME 	"GPIO_0"
+#define GPIO_OUT_PIN	2
+#define GPIO_NAME		"GPIO_SS_"
+#define GPIO_DRV_NAME	"GPIO_0"
 
 /*
  * This program toggles PIN A0 so if you connect an LED to that pin you

@@ -3,9 +3,9 @@
 #include <sys_clock.h>
 #include <zephyr.h>
 
-#define GPIO_OUT_PIN 	16
-#define GPIO_NAME 		"GPIO_"
-#define GPIO_DRV_NAME 	"GPIO_0"
+#define GPIO_OUT_PIN	16
+#define GPIO_NAME		"GPIO_"
+#define GPIO_DRV_NAME	"GPIO_0"
 
 /*
  * This program toggles PIN IO 8 so if you connect an LED to that pin you

@@ -27,7 +27,7 @@ Getting the Zephyr project to work properly on the mac takes a bit of fiddling, 
 
 - [Building Zephyr OS on Mac](https://gist.github.com/kmp1/9d6068766b1bd841494cad3ab1128622)
 - [Compiling an Application on Zephyr OS for Arduino 101 on the MAC](https://gist.github.com/kmp1/60247d08d4c9c235439872c7bfce2ab4)
-- [Notes on Getting Flashing a Zephyr Image using a JTAG Adapter on MAC](https://gist.github.com/kmp1/7fc987aebb11e73cab433264e0ed8123)
+- [Notes on Flashing a Zephyr Image using a JTAG Adapter on MAC](https://gist.github.com/kmp1/7fc987aebb11e73cab433264e0ed8123)
 
 ##Example Application Details
 
